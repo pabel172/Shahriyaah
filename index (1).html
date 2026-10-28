@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>
+(function(){var d=document.documentElement,seen=false;
+try{
+  if(/[?&#]replay/.test(location.href))localStorage.removeItem("sj_seen_v2");
+  seen=!!localStorage.getItem("sj_seen_v2");
+}catch(e){}
+/* "js" class (which turns animations on) is added only on the first visit */
+if(!seen)d.classList.add("js");
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shahriar Jaman – Portfolio</title>
+<meta name="description" content="Portfolio of Shahriar Jaman, a science graduate from Bangladesh skilled in MS Office and computer operation.">
+<meta name="author" content="Shahriar Jaman">
+<meta name="theme-color" content="#2563eb">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://i.ibb.co.com/rRBDxKG5/IMG-9918.avif">
+<meta property="og:title" content="Shahriar Jaman – Portfolio">
+<meta property="og:description" content="Science graduate from Bangladesh skilled in MS Office and computer operation.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇧🇩</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8fafc; --surface:#ffffff; --ink:#0f172a; --muted:#475569;
+  --green:#2563eb; --green-soft:#e6eefe; --red:#2563eb; --line:#e2e8f0; --on-accent:#ffffff;
+  --display:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0b1220; --surface:#111a2e; --ink:#e2e8f0; --muted:#94a3b8;
+        --green:#60a5fa; --green-soft:#172554; --line:#1e293b; --red:#60a5fa; --on-accent:#0b1220;}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.7;font-size:1.0625rem;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+
+/* nav */
+body>nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body>nav .wrap{display:flex;align-items:center;gap:1.4rem;overflow-x:auto;padding-top:.8rem;padding-bottom:.8rem;scrollbar-width:none}
+nav .brand{margin-right:auto;color:var(--ink);font-weight:800;letter-spacing:-.02em;font-size:1.05rem}
+nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem;white-space:nowrap}
+nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding:4.5rem 0 4rem;background:radial-gradient(48rem 20rem at 85% -10%,var(--green-soft),transparent 70%)}
+.hero .wrap{display:grid;justify-items:start}
+.avatar{position:relative;overflow:hidden;width:9rem;height:9rem;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:2.2rem;color:#fff;letter-spacing:-.02em;background:linear-gradient(135deg,#2563eb,#38bdf8);box-shadow:0 0 0 5px var(--bg),0 0 0 7px var(--green);margin-bottom:1.75rem}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.hero small{display:block;color:var(--green);font-weight:600;font-size:1rem;margin-bottom:.5rem}
+.hero h1{font-weight:800;font-size:clamp(2.6rem,9vw,4.6rem);line-height:1.02;letter-spacing:-.035em;color:var(--ink)}
+.hero h1 span{display:block}
+.hero p{max-width:34rem;margin-top:1.4rem;font-size:1.15rem;color:var(--muted)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;list-style:none}
+.facts li{background:var(--green-soft);color:var(--green);padding:.4rem .9rem;border-radius:2rem;font-size:.9rem;font-weight:600}
+.btn{display:inline-block;margin-top:2rem;background:var(--red);color:var(--on-accent);text-decoration:none;font-weight:600;padding:.85rem 1.7rem;border-radius:.6rem;box-shadow:0 6px 16px rgba(37,99,235,.3)}
+.btn:hover{filter:brightness(1.08)}
+
+/* sections */
+section{padding:4rem 0}
+main section:nth-of-type(even){background:var(--surface);border-block:1px solid var(--line)}
+h2{font-weight:800;font-size:clamp(1.7rem,5vw,2.2rem);letter-spacing:-.03em;color:var(--ink);margin-bottom:2rem;line-height:1.15}
+h2::after{content:"";display:block;width:3rem;height:4px;border-radius:4px;background:var(--green);margin-top:.7rem}
+h3{font-weight:700;font-size:1.15rem;margin-bottom:.6rem;letter-spacing:-.01em}
+.grid{display:grid;gap:1.25rem}
+@media(min-width:44rem){.grid.two{grid-template-columns:1fr 1fr}}
+
+/* education */
+.edu{display:grid;gap:1.25rem}
+.edu article{background:var(--surface);border:1px solid var(--line);border-radius:.9rem;box-shadow:0 1px 3px rgba(15,23,42,.06);padding:1.25rem 1.4rem}
+.edu .year{color:var(--muted);font-size:.92rem}
+.edu h3{margin:.2rem 0 .25rem}
+.edu p{color:var(--muted);font-size:.98rem}
+.gpa{margin-top:.9rem}
+.gpa b{font-family:var(--display);font-size:1.4rem;color:var(--green)}
+.bar{height:.5rem;background:var(--green-soft);border-radius:1rem;margin-top:.4rem;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--green);border-radius:1rem}
+
+/* lists */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:.9rem;padding:1.5rem;box-shadow:0 1px 3px rgba(15,23,42,.06)}
+main section:nth-of-type(even) .card,main section:nth-of-type(even) .exp,main section:nth-of-type(even) .edu article{background:var(--bg)}
+.card ul{list-style:none}
+.card li{padding:.5rem 0 .5rem 1.4rem;position:relative;border-top:1px solid var(--line)}
+.card li:first-child{border-top:0}
+.card li::before{content:"";position:absolute;left:0;top:1.1rem;width:.55rem;height:.55rem;border-radius:50%;background:var(--red)}
+.lang{display:flex;justify-content:space-between;gap:1rem}
+.lang span{color:var(--muted)}
+
+/* contact */
+.contact{display:grid;gap:.9rem;list-style:none}
+@media(min-width:44rem){.contact{grid-template-columns:1fr 1fr}}
+.contact a{display:flex;align-items:center;gap:1rem;background:var(--surface);border:1px solid var(--line);border-radius:.9rem;padding:1rem 1.2rem;text-decoration:none}
+.contact a:hover{border-color:var(--green)}
+.txt{display:block}
+.contact b{display:block;font-family:var(--display)}
+.contact span{color:var(--muted);font-size:.95rem}
+.ico{flex:none;width:2.7rem;height:2.7rem;border-radius:.7rem;background:var(--green);color:var(--on-accent);display:grid;place-items:center;font-family:var(--display);font-weight:800}
+
+.details{display:grid;gap:.1rem}
+.details div{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-top:1px solid var(--line)}
+.details div:first-child{border-top:0}
+.details dt{color:var(--muted)}
+.details dd{font-weight:500;text-align:right}
+.exp{background:var(--surface);border:1px solid var(--line);border-radius:.9rem;box-shadow:0 1px 3px rgba(15,23,42,.06);padding:1.25rem 1.4rem}
+.exp p{color:var(--muted);margin-bottom:.9rem}
+footer{background:#0f172a;color:#e2e8f0;padding:3rem 0 3.25rem;font-size:.95rem}
+@media(prefers-color-scheme:dark){footer{background:#070d19}}
+footer .top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 2rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,.2)}
+footer strong{font-size:1.2rem}
+footer nav{position:static;background:none;border:0}
+footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem 1.25rem}
+footer a{text-decoration:none;opacity:.85}
+footer a:hover{opacity:1;text-decoration:underline}
+footer .legal{padding-top:1.25rem;max-width:44rem;opacity:.85}
+footer .legal p+p{margin-top:.5rem}
+#totop{position:fixed;right:1rem;bottom:1rem;width:2.8rem;height:2.8rem;border-radius:50%;background:var(--red);color:var(--on-accent);display:grid;place-items:center;text-decoration:none;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+/* ---------- animation ---------- */
+@keyframes rise{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes blink{50%{opacity:0}}
+.js .avatar,.js .hero small,.js .hero h1 span,.js .hero p,.js .hero .typed,.js .hero .facts,.js .hero .btn{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero small{animation-delay:.05s}
+.js .hero h1 span:nth-child(1){animation-delay:.15s}
+.js .hero h1 span:nth-child(2){animation-delay:.3s}
+.hero p{animation-delay:.5s}
+.js .hero .typed{animation-delay:.65s}
+.js .hero .facts{animation-delay:.8s}
+.js .hero .btn{animation-delay:.95s}
+.typed{margin-top:1rem;font-weight:700;font-size:1.25rem;color:var(--green);min-height:2rem}
+.caret{display:inline-block;width:2px;height:1.2em;background:var(--red);margin-left:3px;vertical-align:-.2em;animation:blink 1s steps(1) 6}
+.caret.done{display:none}
+.btn{transition:transform .2s ease,filter .2s}
+.btn:hover{translate:0 -3px}
+
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.js .bar i{width:0;transition:width 1.4s cubic-bezier(.2,.7,.2,1) .35s}
+.js .in .bar i{width:var(--w)}
+.bar i{width:var(--w)}
+
+.card,.edu article,.exp,.contact a{transition:translate .25s ease,box-shadow .25s ease,border-color .25s}
+.card:hover,.edu article:hover,.exp:hover,.contact a:hover{translate:0 -5px;box-shadow:0 10px 24px rgba(15,23,42,.12)}
+.ico{transition:transform .3s ease,background .3s}
+.contact a:hover .ico{transform:rotate(-10deg) scale(1.1);background:var(--red)}
+.facts li{transition:transform .2s ease}
+.facts li:hover{transform:translateY(-3px)}
+nav a{position:relative;padding-bottom:.2rem}
+nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+nav a:hover::after,nav a.active::after{transform:scaleX(1)}
+nav a.active{color:var(--ink)}
+#totop{transition:opacity .3s,transform .3s}
+#totop.hide{opacity:0;transform:translateY(16px);pointer-events:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+  .js .bar i{width:var(--w)}
+}
+</style>
+</head>
+<body id="top">
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Shahriar Jaman</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#languages">Languages</a>
+    <a href="#interests">Interests</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="avatar"><span aria-hidden="true">SJ</span><img src="https://i.ibb.co.com/rRBDxKG5/IMG-9918.avif" alt="Photo of Shahriar Jaman" width="160" height="160" decoding="async" referrerpolicy="no-referrer" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='photo.jpg'}else{this.remove()}"></div>
+    <small>Portfolio</small>
+    <h1><span>Shahriar</span><span>Jaman</span></h1>
+    <p>Science graduate from Bangladesh 🇧🇩, skilled in MS Office and computer work, ready to learn and contribute.</p>
+    <div class="typed" aria-live="off">I am a <span id="typed">science graduate</span><span class="caret"></span></div>
+    <ul class="facts">
+      <li>Born 28 April 2005</li>
+      <li>Bangladesh 🇧🇩</li>
+      <li>H.S.C (Science) 2024</li>
+    </ul>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main>
+  <section id="about">
+    <div class="wrap">
+      <h2>Career objective</h2>
+      <div class="grid two">
+      <p>Motivated and hard-working Science graduate seeking a position in a reputable organisation where I can apply my computer and office skills, develop my potential and contribute to the organisation’s growth while achieving my own career goals.</p>
+      <div class="card">
+        <h3>Personal details</h3>
+        <dl class="details">
+          <div><dt>Full name</dt><dd>Shahriar Jaman</dd></div>
+          <div><dt>Date of birth</dt><dd>28 April 2005</dd></div>
+          <div><dt>Age</dt><dd id="age">21</dd></div>
+          <div><dt>Nationality</dt><dd>Bangladeshi 🇧🇩</dd></div>
+          <div><dt>Education</dt><dd>H.S.C (Science)</dd></div>
+        </dl>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="edu">
+        <article>
+          <div class="year">2024</div>
+          <h3>Higher Secondary Certificate (H.S.C)</h3>
+          <p>Adda College · Board: Cumilla · Science</p>
+          <div class="gpa"><b>4.17</b> / 5.00 GPA
+            <div class="bar" role="img" aria-label="GPA 4.17 out of 5"><i style="--w:83.4%"></i></div>
+          </div>
+        </article>
+        <article>
+          <div class="year">2022</div>
+          <h3>Secondary School Certificate (S.S.C)</h3>
+          <p>Perpeti High School · Board: Cumilla · Science</p>
+          <div class="gpa"><b>4.39</b> / 5.00 GPA
+            <div class="bar" role="img" aria-label="GPA 4.39 out of 5"><i style="--w:87.8%"></i></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <div class="exp">
+        <h3>Computer and office work</h3>
+        <p>6 months of hands-on experience in MS Office and computer work.</p>
+        <ul class="facts">
+          <li>MS Word</li><li>MS Excel</li><li>MS PowerPoint</li><li>Typewriting</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Technical skills</h3>
+          <ul>
+            <li>MS Word, Excel and PowerPoint</li>
+            <li>Computer operation and typewriting</li>
+            <li>Internet browsing and e-mail</li>
+            <li>6 months of experience in MS Office and computer work</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Professional strengths</h3>
+          <ul>
+            <li>Planning, leadership and organisation</li>
+            <li>Willing to give full effort in any role</li>
+            <li>Quick learner, adaptable to any sector</li>
+            <li>Good written and spoken communication</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="languages">
+    <div class="wrap">
+      <h2>Languages</h2>
+      <div class="card" style="max-width:32rem">
+        <ul>
+          <li class="lang">Bengali <span>Native</span></li>
+          <li class="lang">English <span>Good (writing, reading, listening)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="interests">
+    <div class="wrap">
+      <h2>Hobbies &amp; interests</h2>
+      <ul class="facts">
+        <li>Travelling</li>
+        <li>Writing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p style="margin-bottom:1.5rem;color:var(--muted)">Find me on Facebook, Instagram or Telegram, username <b>@shahriyaah</b>.</p>
+      <ul class="contact">
+        <li><a href="https://facebook.com/shahriyaah" target="_blank" rel="noopener"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span><span class="txt"><b>Facebook</b><span>@shahriyaah</span></span></a></li>
+        <li><a href="https://instagram.com/shahriyaah" target="_blank" rel="noopener"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span><span class="txt"><b>Instagram</b><span>@shahriyaah</span></span></a></li>
+        <li><a href="https://t.me/shahriyaah" target="_blank" rel="noopener"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span class="txt"><b>Telegram</b><span>@shahriyaah</span></span></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer id="copyright">
+  <div class="wrap">
+    <div class="top">
+      <strong>Shahriar Jaman</strong>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="legal">
+      <p>© <span id="yr">2026</span> Shahriar Jaman. All rights reserved.</p>
+      <p>The text, design and code of this portfolio belong to Shahriar Jaman. Please do not copy, reproduce or reuse any part of it without written permission.</p>
+    </div>
+  </div>
+</footer>
+
+<a id="totop" href="#top" aria-label="Back to top">↑</a>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();
+var d=new Date(),a=d.getFullYear()-2005;if(d<new Date(d.getFullYear(),3,28))a--;
+document.getElementById('age').textContent=a+' years';
+(function(){
+  var first=document.documentElement.classList.contains('js'),
+      calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(calm)first=false;
+  /* scroll reveal */
+  var els=document.querySelectorAll('section h2,section .wrap>p,.edu article,.exp,.grid.two>*,section .facts,.contact li');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+  })},{threshold:.15});
+  if(first)els.forEach(function(el,i){
+    el.classList.add('reveal');
+    el.style.transitionDelay=((Array.prototype.indexOf.call(el.parentNode.children,el))%4*90)+'ms';
+    io.observe(el);
+  });
+  /* GPA count-up */
+  document.querySelectorAll('.gpa b').forEach(function(b){
+    var end=parseFloat(b.textContent);if(!first)return;
+    var seen=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;seen.disconnect();
+      var t0=performance.now();(function step(t){var p=Math.min((t-t0)/1400,1);
+        b.textContent=(end*(1-Math.pow(1-p,3))).toFixed(2);if(p<1)requestAnimationFrame(step);})(t0);
+    },{threshold:.6});seen.observe(b);
+  });
+  /* typing effect: runs once, then stops */
+  var el=document.getElementById('typed'),caret=document.querySelector('.caret'),
+      txt='science graduate',n=0;
+  if(first){el.textContent='';(function tick(){
+    n++;el.textContent=txt.slice(0,n);
+    if(n<txt.length)setTimeout(tick,70);else caret.classList.add('done');
+  })();}else{caret.classList.add('done');}
+  /* active nav link + back-to-top */
+  var links=document.querySelectorAll('body>nav a');
+  var sec=document.querySelectorAll('main section');
+  var top=document.getElementById('totop');
+  function onScroll(){
+    var y=scrollY+120,cur='';
+    sec.forEach(function(s){if(s.offsetTop<=y)cur=s.id;});
+    links.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+cur);});
+    top.classList.toggle('hide',scrollY<400);
+  }
+  setTimeout(function(){try{localStorage.setItem('sj_seen_v2','1')}catch(e){}},4000);
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();</script>
+</body>
+</html>
